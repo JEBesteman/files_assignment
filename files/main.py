@@ -5,10 +5,12 @@ from os import mkdir, remove, listdir
 import os.path
 import zipfile
 
+# paths
 current_path = os.path.dirname(__file__)
 # c:\Users\jebes\OneDrive\Documenten\files_assignment\files
 cache_path = os.path.join(current_path, "cache")
 # c:\Users\jebes\OneDrive\Documenten\files_assignment\files\cache
+zip_file_path = os.path.join(current_path, "data.zip")
 
 
 def clean_cache():
@@ -22,8 +24,6 @@ def clean_cache():
 
 
 clean_cache()
-
-zip_file_path = os.path.join(current_path, "data.zip")
 
 
 def cache_zip(zip_file_path: str, cache_dir_path: str):

@@ -46,7 +46,8 @@ def find_password(list_file_paths: list[str]):
         with open(file, "r") as f:
             for line in f:
                 if "password" in line:
-                    password = line[line.find(" ") + 1 : -1]
+                    # password = line[line.find(" ") + 1 : -1]
+                    password = line[line.find(" ") :].strip()
                     return password
 
 
